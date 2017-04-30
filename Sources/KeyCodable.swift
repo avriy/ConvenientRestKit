@@ -11,7 +11,7 @@ extension RawRepresentable where RawValue == String {
     }
 }
 
-enum CodingErrors: Error {
+enum ConvenientRestKitError: Error {
     case noValueForKey(String)
     
     case wrongDateFormat
@@ -34,7 +34,7 @@ func ??<T>(lhs: T?, errorType: Error) throws -> T {
 ///  array of JSONInitializable is JSONInitializable
 extension Array where Element: JSONInitializable {
     init(json: JSON) throws {
-        guard let arrayOfJSONs = json.array else { throw CodingErrors.wrongJSONFormat }
+        guard let arrayOfJSONs = json.array else { throw ConvenientRestKitError.wrongJSONFormat }
         self = try arrayOfJSONs.map { try Element(json: $0) }
     }
     
@@ -58,7 +58,7 @@ extension Array where Element: JSONRepresentable {
 
 extension RequestConfigurationProtocol {
     static func json(forData data: Data?) throws -> JSON {
-        return try data.flatMap({ JSON(data: $0) }) ?? CodingErrors.noDataInResponse
+        return try data.flatMap({ JSON(data: $0) }) ?? ConvenientRestKitError.noDataInResponse
     }
     
     static func parsedObject<T: JSONInitializable>(forData data: Data?) throws -> T {
@@ -108,7 +108,7 @@ public extension JSON {
     }
     
     func value<T>(forKey key: KeyCodable, jsonModifier: (JSON) -> T?) throws -> T {
-        return try jsonModifier(self[key]) ?? CodingErrors.noValueForKey(key.codingKey)
+        return try jsonModifier(self[key]) ?? ConvenientRestKitError.noValueForKey(key.codingKey)
     }
     
     func stringValue(forKey key: KeyCodable) throws -> String {
@@ -145,7 +145,7 @@ public extension JSON {
     
     func dateValue(forKey key: KeyCodable, dateFormatter: DateFormatter) throws -> Date {
         let dateString = try stringValue(forKey: key)
-        return try dateFormatter.date(from: dateString) ?? CodingErrors.wrongDateFormat
+        return try dateFormatter.date(from: dateString) ?? ConvenientRestKitError.wrongDateFormat
     }
     
     func date(forKey key: KeyCodable, dateFormatter: DateFormatter) -> Date? {
@@ -155,7 +155,7 @@ public extension JSON {
     
     func rawRepresentableValue<T: RawRepresentable>(forKey key: KeyCodable, jsonValue: (JSON) -> T.RawValue?) throws -> T {
         let rawValue = try value(forKey: key, jsonModifier: jsonValue)
-        return try T(rawValue: rawValue) ?? CodingErrors.failedToInitializeRawRepresentable
+        return try T(rawValue: rawValue) ?? ConvenientRestKitError.failedToInitializeRawRepresentable
     }
     
     subscript (key: KeyCodable) -> JSON {

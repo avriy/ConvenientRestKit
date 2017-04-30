@@ -18,7 +18,8 @@ public enum RequestContent {
 
     fileprivate var httpHeaderField: String {
         switch self {
-        case .json(_): return "application/json"
+        case .json(_):
+            return "application/json"
         case .none:
             fatalError("Can not apply httpHeaderField for RequestContent.none")
         }
@@ -30,20 +31,6 @@ public enum HTTPMethodType: String {
     case post = "POST"
     case put = "PUT"
     case delete = "DELETE"
-}
-
-public protocol RequestConfigurationProtocol {
-    associatedtype ResultType
-    associatedtype DomainType: DomainProtocol
-    
-    var domain: DomainType { get }
-    var apiPath: String { get }
-
-    var methodType: HTTPMethodType { get }
-    var content: RequestContent { get }
-    func urlRequest() throws -> URLRequest
-    static func processResponse(response: HTTPURLResponse, data: Data?) throws -> ResultType
-    var session: URLSession { get }
 }
 
 public extension URLRequest {
@@ -70,15 +57,15 @@ public extension URLRequest {
 }
 
 public extension RequestConfigurationProtocol where ResultType: JSONInitializable {
+    
     static func processResponse(response: HTTPURLResponse, data: Data?) throws -> ResultType {
         guard let data = data else {
-            throw CodingErrors.noDataInResponse
+            throw ConvenientRestKitError.noDataInResponse
         }
         let json = JSON(data: data)
         return try ResultType(json: json)
     }
 }
-
 
 public extension RequestConfigurationProtocol {
     

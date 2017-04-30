@@ -23,43 +23,35 @@ extension Scarer: JSONInitializable {
     }
 }
 
-struct GetScarers: RequestConfigurationProtocol {
+struct GetScarers: GetRequestConfigurationProtocol {
+    typealias ResultType = [Scarer]
     
     let domain = URLDomain(baseURL: URL(string: "https://avriy.github.io")!)
     let apiPath = "scarers"
-    let methodType: HTTPMethodType = .get
-    let content: RequestContent = .none
     let session: URLSession = .shared
     
-    static func processResponse(response: HTTPURLResponse, data: Data?) throws -> [Scarer] {
-        if let data = data {
-            let jsonObject = JSON(data: data)
-            return try [Scarer](json: jsonObject)
-        }
-        
-        return []
+    static func parseResult(from data: Data) throws -> [Scarer] {
+        let jsonObject = JSON(data: data)
+        return try [Scarer](json: jsonObject)
     }
+
 }
 
 #if os(macOS)
 
-struct GetScarerImage: RequestConfigurationProtocol {
+struct GetScarerImage: GetRequestConfigurationProtocol {
+    
+    typealias ResultType = NSImage
     let domain: URLDomain
     let apiPath = ""
-    let methodType: HTTPMethodType = .get
-    let content: RequestContent = .none
     let session: URLSession = .shared
     
     init(scarer: Scarer) {
         domain = URLDomain(baseURL: scarer.url)
     }
     
-    static func processResponse(response: HTTPURLResponse, data: Data?) throws -> NSImage {
-        guard let data = data, let image = NSImage(data: data) else {
-            throw CodingErrors.noDataInResponse
-        }
-        
-        return image
+    static func parseResult(from data: Data) throws -> NSImage {
+        return NSImage(data: data)!
     }
 }
 
