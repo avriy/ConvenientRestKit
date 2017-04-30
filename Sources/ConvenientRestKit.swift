@@ -38,16 +38,17 @@ public protocol RequestConfigurationProtocol {
     
     var domain: DomainType { get }
     var apiPath: String { get }
-    var urlRequest: URLRequest { get }
+
     var methodType: HTTPMethodType { get }
     var content: RequestContent { get }
+    func urlRequest() throws -> URLRequest
     static func processResponse(response: HTTPURLResponse, data: Data?) throws -> ResultType
     var session: URLSession { get }
 }
 
 public extension URLRequest {
 
-    static func request(url: URL, method: HTTPMethodType, contentType: RequestContent, etag: String? = nil) -> URLRequest {
+    static func request(url: URL, method: HTTPMethodType, contentType: RequestContent, etag: String? = nil) throws -> URLRequest {
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
@@ -56,7 +57,7 @@ public extension URLRequest {
         case .json(let jsonValue):
             request.addValue(contentType.httpHeaderField, forHTTPHeaderField: "Content-Type")
             request.setValue("gzip", forHTTPHeaderField: "Content-Encoding")
-            request.httpBody = try! jsonValue.rawData()
+            request.httpBody = try jsonValue.rawData()
         case .none:
             break
         }
@@ -81,14 +82,14 @@ public extension RequestConfigurationProtocol where ResultType: JSONInitializabl
 
 public extension RequestConfigurationProtocol {
     
-    var urlRequest: URLRequest {
-        
+    func urlRequest() throws -> URLRequest {
         let url = apiPath.isEmpty ? domain.baseURL : domain.baseURL.appendingPathComponent(apiPath)
-        return URLRequest.request(url: url, method: methodType, contentType: content)
+        return try URLRequest.request(url: url, method: methodType, contentType: content)
     }
     
-    func dataTask(errorHandler eh: @escaping (Error) -> Void, successHandler sh: @escaping (Self.ResultType) -> Void) -> URLSessionDataTask {
-        return session.dataTask(with: urlRequest) { (data, response, error) in
+    func dataTask(errorHandler eh: @escaping (Error) -> Void, successHandler sh: @escaping (Self.ResultType) -> Void) throws -> URLSessionDataTask {
+        let request = try urlRequest()
+        return session.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 return eh(error)
             }
@@ -104,7 +105,12 @@ public extension RequestConfigurationProtocol {
     }
     
     func performTask(errorHandler eh: @escaping (Error) -> Void, successHandler sh: @escaping (Self.ResultType) -> Void) {
-        let task = dataTask(errorHandler: eh, successHandler: sh)
-        task.resume()
+        do {
+            let task = try dataTask(errorHandler: eh, successHandler: sh)
+            task.resume()
+        } catch {
+            eh(error)
+        }
+        
     }
 }
