@@ -84,6 +84,8 @@ class ConvenientRestKitTests: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
     }
     
+#if os(macOS)
+    
     func testDownloadScarerImage() {
         let canDownloadScarerImage = expectation(description: "Can download scarer image")
         let mike = Scarer(name: "Mike Wazowski", nickname: nil, url: URL(string: "https://yt3.ggpht.com/-qKieNm4z4W4/AAAAAAAAAAI/AAAAAAAAAAA/kAhPHqgE5N4/s900-c-k-no-mo-rj-c0xffffff/photo.jpg")!)
@@ -95,6 +97,7 @@ class ConvenientRestKitTests: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
     }
 
+#endif
 
     static var allTests = [
         ("testExample", testDownloadScarers),
