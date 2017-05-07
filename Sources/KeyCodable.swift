@@ -5,7 +5,7 @@ public protocol KeyCodable {
     var codingKey: String { get }
 }
 
-extension RawRepresentable where RawValue == String {
+public extension RawRepresentable where RawValue == String {
     var codingKey: String {
         return rawValue
     }
