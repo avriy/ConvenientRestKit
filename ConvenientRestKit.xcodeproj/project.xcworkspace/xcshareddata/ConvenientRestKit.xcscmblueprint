@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "64F3B0CBB39C93A2486C2C9C7F92494541AB9270",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "64F3B0CBB39C93A2486C2C9C7F92494541AB9270" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "35EFD8F4-9A29-4D66-8855-87F9F8210074",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "64F3B0CBB39C93A2486C2C9C7F92494541AB9270" : "ConvenientRestKit\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "ConvenientRestKit\/.build\/checkouts\/SwiftyJSON.git-3043514560129222422\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ConvenientRestKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ConvenientRestKit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:avriy\/ConvenientRestKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "64F3B0CBB39C93A2486C2C9C7F92494541AB9270"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/avriy\/Developer\/ConvenientRestKit\/.build\/repositories\/SwiftyJSON.git-3043514560129222422",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3"
+    }
+  ]
+}
