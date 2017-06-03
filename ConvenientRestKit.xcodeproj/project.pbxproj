@@ -7,480 +7,326 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		630EADB31EB618DD00AE2F71 /* JSONCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EADB21EB618DD00AE2F71 /* JSONCoding.swift */; };
-		630EADB51EB618F500AE2F71 /* KeyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EADB41EB618F500AE2F71 /* KeyCodable.swift */; };
-		63769B2B1EB688790004956D /* RequestConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63769B2A1EB688790004956D /* RequestConfigurationProtocol.swift */; };
-		OBJ_24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SwiftyJSON.swift */; };
-		OBJ_31 /* ConvenientRestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* ConvenientRestKit.swift */; };
-		OBJ_33 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* SwiftyJSON.framework */; };
-		OBJ_40 /* ConvenientRestKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ConvenientRestKitTests.swift */; };
-		OBJ_42 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* SwiftyJSON.framework */; };
-		OBJ_43 /* ConvenientRestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ConvenientRestKit.framework */; };
+		63141E881EE1F27200D8587A /* ConvenientRestKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 63141E7A1EE1F27200D8587A /* ConvenientRestKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63141E931EE1F2AE00D8587A /* ConvenientRestKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63141E8F1EE1F2AE00D8587A /* ConvenientRestKit.swift */; };
+		63141E941EE1F2AE00D8587A /* JSONCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63141E901EE1F2AE00D8587A /* JSONCoding.swift */; };
+		63141E951EE1F2AE00D8587A /* KeyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63141E911EE1F2AE00D8587A /* KeyCodable.swift */; };
+		63141E961EE1F2AE00D8587A /* RequestConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63141E921EE1F2AE00D8587A /* RequestConfigurationProtocol.swift */; };
+		63141E981EE342B800D8587A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63141E971EE342B800D8587A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		630EADAC1EB6114800AE2F71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_19;
-			remoteInfo = SwiftyJSON;
-		};
-		630EADAD1EB6114800AE2F71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_19;
-			remoteInfo = SwiftyJSON;
-		};
-		630EADAE1EB6114800AE2F71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_26;
-			remoteInfo = ConvenientRestKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		630EADB21EB618DD00AE2F71 /* JSONCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCoding.swift; sourceTree = "<group>"; };
-		630EADB41EB618F500AE2F71 /* KeyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCodable.swift; sourceTree = "<group>"; };
-		63769B2A1EB688790004956D /* RequestConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfigurationProtocol.swift; sourceTree = "<group>"; };
-		OBJ_11 /* ConvenientRestKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenientRestKitTests.swift; sourceTree = "<group>"; };
-		OBJ_14 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		OBJ_16 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_17 /* ConvenientRestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ConvenientRestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_18 /* ConvenientRestKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ConvenientRestKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* ConvenientRestKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenientRestKit.swift; sourceTree = "<group>"; };
+		63141E771EE1F27200D8587A /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63141E7A1EE1F27200D8587A /* ConvenientRestKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvenientRestKit.h; sourceTree = "<group>"; };
+		63141E7B1EE1F27200D8587A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63141E8F1EE1F2AE00D8587A /* ConvenientRestKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvenientRestKit.swift; path = Sources/ConvenientRestKit.swift; sourceTree = SOURCE_ROOT; };
+		63141E901EE1F2AE00D8587A /* JSONCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONCoding.swift; path = Sources/JSONCoding.swift; sourceTree = SOURCE_ROOT; };
+		63141E911EE1F2AE00D8587A /* KeyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyCodable.swift; path = Sources/KeyCodable.swift; sourceTree = SOURCE_ROOT; };
+		63141E921EE1F2AE00D8587A /* RequestConfigurationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestConfigurationProtocol.swift; path = Sources/RequestConfigurationProtocol.swift; sourceTree = SOURCE_ROOT; };
+		63141E971EE342B800D8587A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_25 /* Frameworks */ = {
+		63141E731EE1F27200D8587A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_32 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_33 /* SwiftyJSON.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_42 /* SwiftyJSON.framework in Frameworks */,
-				OBJ_43 /* ConvenientRestKit.framework in Frameworks */,
+				63141E981EE342B800D8587A /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* ConvenientRestKitTests */ = {
+		63141E6B1EE1F20800D8587A = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* ConvenientRestKitTests.swift */,
+				63141E8F1EE1F2AE00D8587A /* ConvenientRestKit.swift */,
+				63141E901EE1F2AE00D8587A /* JSONCoding.swift */,
+				63141E911EE1F2AE00D8587A /* KeyCodable.swift */,
+				63141E921EE1F2AE00D8587A /* RequestConfigurationProtocol.swift */,
+				63141E791EE1F27200D8587A /* ConvenientRestKit */,
+				63141E781EE1F27200D8587A /* Products */,
 			);
-			name = ConvenientRestKitTests;
-			path = Tests/ConvenientRestKitTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_12 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_13 /* SwiftyJSON 3.1.4 */,
-			);
-			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_13 /* SwiftyJSON 3.1.4 */ = {
+		63141E781EE1F27200D8587A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* SwiftyJSON.swift */,
-			);
-			name = "SwiftyJSON 3.1.4";
-			path = ".build/checkouts/SwiftyJSON.git-3043514560129222422/Source";
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_15 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_16 /* SwiftyJSON.framework */,
-				OBJ_17 /* ConvenientRestKit.framework */,
-				OBJ_18 /* ConvenientRestKitTests.xctest */,
+				63141E771EE1F27200D8587A /* .framework */,
 			);
 			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_5 = {
-			isa = PBXGroup;
-			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
-				OBJ_9 /* Tests */,
-				OBJ_12 /* Dependencies */,
-				OBJ_15 /* Products */,
-			);
 			sourceTree = "<group>";
 		};
-		OBJ_7 /* Sources */ = {
+		63141E791EE1F27200D8587A /* ConvenientRestKit */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* ConvenientRestKit.swift */,
-				63769B2A1EB688790004956D /* RequestConfigurationProtocol.swift */,
-				630EADB21EB618DD00AE2F71 /* JSONCoding.swift */,
-				630EADB41EB618F500AE2F71 /* KeyCodable.swift */,
+				63141E971EE342B800D8587A /* SwiftyJSON.framework */,
+				63141E7A1EE1F27200D8587A /* ConvenientRestKit.h */,
+				63141E7B1EE1F27200D8587A /* Info.plist */,
 			);
-			path = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* ConvenientRestKitTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
+			path = ConvenientRestKit;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		63141E741EE1F27200D8587A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63141E881EE1F27200D8587A /* ConvenientRestKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		OBJ_19 /* SwiftyJSON */ = {
+		63141E761EE1F27200D8587A /* ConvenientRestKit OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_20 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = 63141E8D1EE1F27200D8587A /* Build configuration list for PBXNativeTarget "ConvenientRestKit OSX" */;
 			buildPhases = (
-				OBJ_23 /* Sources */,
-				OBJ_25 /* Frameworks */,
+				63141E721EE1F27200D8587A /* Sources */,
+				63141E731EE1F27200D8587A /* Frameworks */,
+				63141E741EE1F27200D8587A /* Headers */,
+				63141E751EE1F27200D8587A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftyJSON;
-			productName = SwiftyJSON;
-			productReference = OBJ_16 /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		OBJ_26 /* ConvenientRestKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_27 /* Build configuration list for PBXNativeTarget "ConvenientRestKit" */;
-			buildPhases = (
-				OBJ_30 /* Sources */,
-				OBJ_32 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_34 /* PBXTargetDependency */,
-			);
-			name = ConvenientRestKit;
+			name = "ConvenientRestKit OSX";
 			productName = ConvenientRestKit;
-			productReference = OBJ_17 /* ConvenientRestKit.framework */;
+			productReference = 63141E771EE1F27200D8587A /* .framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		OBJ_35 /* ConvenientRestKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "ConvenientRestKitTests" */;
-			buildPhases = (
-				OBJ_39 /* Sources */,
-				OBJ_41 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_44 /* PBXTargetDependency */,
-				OBJ_45 /* PBXTargetDependency */,
-			);
-			name = ConvenientRestKitTests;
-			productName = ConvenientRestKitTests;
-			productReference = OBJ_18 /* ConvenientRestKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		OBJ_1 /* Project object */ = {
+		63141E6C1EE1F20800D8587A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 9999;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					63141E761EE1F27200D8587A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 53SA4N65K2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "ConvenientRestKit" */;
+			buildConfigurationList = 63141E6F1EE1F20800D8587A /* Build configuration list for PBXProject "ConvenientRestKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_15 /* Products */;
+			mainGroup = 63141E6B1EE1F20800D8587A;
+			productRefGroup = 63141E781EE1F27200D8587A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_19 /* SwiftyJSON */,
-				OBJ_26 /* ConvenientRestKit */,
-				OBJ_35 /* ConvenientRestKitTests */,
+				63141E761EE1F27200D8587A /* ConvenientRestKit OSX */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		63141E751EE1F27200D8587A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_23 /* Sources */ = {
+		63141E721EE1F27200D8587A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				OBJ_24 /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_30 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				63769B2B1EB688790004956D /* RequestConfigurationProtocol.swift in Sources */,
-				OBJ_31 /* ConvenientRestKit.swift in Sources */,
-				630EADB51EB618F500AE2F71 /* KeyCodable.swift in Sources */,
-				630EADB31EB618DD00AE2F71 /* JSONCoding.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_39 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_40 /* ConvenientRestKitTests.swift in Sources */,
+				63141E961EE1F2AE00D8587A /* RequestConfigurationProtocol.swift in Sources */,
+				63141E951EE1F2AE00D8587A /* KeyCodable.swift in Sources */,
+				63141E931EE1F2AE00D8587A /* ConvenientRestKit.swift in Sources */,
+				63141E941EE1F2AE00D8587A /* JSONCoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		OBJ_34 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_19 /* SwiftyJSON */;
-			targetProxy = 630EADAC1EB6114800AE2F71 /* PBXContainerItemProxy */;
-		};
-		OBJ_44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_19 /* SwiftyJSON */;
-			targetProxy = 630EADAD1EB6114800AE2F71 /* PBXContainerItemProxy */;
-		};
-		OBJ_45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = OBJ_26 /* ConvenientRestKit */;
-			targetProxy = 630EADAE1EB6114800AE2F71 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		OBJ_21 /* Debug */ = {
+		63141E701EE1F20800D8587A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/SwiftyJSON_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SwiftyJSON;
+				PRODUCT_NAME = ConvenientRestKit;
 			};
 			name = Debug;
 		};
-		OBJ_22 /* Release */ = {
+		63141E711EE1F20800D8587A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/SwiftyJSON_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyJSON;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SwiftyJSON;
+				PRODUCT_NAME = ConvenientRestKit;
 			};
 			name = Release;
 		};
-		OBJ_28 /* Debug */ = {
+		63141E891EE1F27200D8587A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/ConvenientRestKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ConvenientRestKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = ConvenientRestKit;
-			};
-			name = Debug;
-		};
-		OBJ_29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/ConvenientRestKit_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ConvenientRestKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = ConvenientRestKit;
-			};
-			name = Release;
-		};
-		OBJ_3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 53SA4N65K2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ConvenientRestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sobolev.ConvenientRestKit;
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				USE_HEADERMAP = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		OBJ_37 /* Debug */ = {
+		63141E8A1EE1F27200D8587A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/ConvenientRestKitTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = ConvenientRestKitTests;
-			};
-			name = Debug;
-		};
-		OBJ_38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ConvenientRestKit.xcodeproj/ConvenientRestKitTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = ConvenientRestKitTests;
-			};
-			name = Release;
-		};
-		OBJ_4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 53SA4N65K2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = s;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ConvenientRestKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sobolev.ConvenientRestKit;
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				USE_HEADERMAP = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_2 /* Build configuration list for PBXProject "ConvenientRestKit" */ = {
+		63141E6F1EE1F20800D8587A /* Build configuration list for PBXProject "ConvenientRestKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
+				63141E701EE1F20800D8587A /* Debug */,
+				63141E711EE1F20800D8587A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
-		OBJ_20 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		63141E8D1EE1F27200D8587A /* Build configuration list for PBXNativeTarget "ConvenientRestKit OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_21 /* Debug */,
-				OBJ_22 /* Release */,
+				63141E891EE1F27200D8587A /* Debug */,
+				63141E8A1EE1F27200D8587A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_27 /* Build configuration list for PBXNativeTarget "ConvenientRestKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_28 /* Debug */,
-				OBJ_29 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_36 /* Build configuration list for PBXNativeTarget "ConvenientRestKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_37 /* Debug */,
-				OBJ_38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = OBJ_1 /* Project object */;
+	rootObject = 63141E6C1EE1F20800D8587A /* Project object */;
 }

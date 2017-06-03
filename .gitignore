@@ -2,3 +2,9 @@
 /.build
 /Packages
 /*.xcodeproj
+Carthage
+Cartfile.resolved
+
+*/xcuserdata
+*.xccheckout
+*.xcscmblueprint

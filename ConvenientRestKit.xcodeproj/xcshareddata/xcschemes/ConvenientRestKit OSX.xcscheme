@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_19"
-               BuildableName = "SwiftyJSON.framework"
-               BlueprintName = "SwiftyJSON"
-               ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_26"
+               BlueprintIdentifier = "63141E761EE1F27200D8587A"
                BuildableName = "ConvenientRestKit.framework"
-               BlueprintName = "ConvenientRestKit"
+               BlueprintName = "ConvenientRestKit OSX"
                ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_35"
+               BlueprintIdentifier = "63141E7F1EE1F27200D8587A"
                BuildableName = "ConvenientRestKitTests.xctest"
                BlueprintName = "ConvenientRestKitTests"
                ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "63141E761EE1F27200D8587A"
+            BuildableName = "ConvenientRestKit.framework"
+            BlueprintName = "ConvenientRestKit OSX"
+            ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -69,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_19"
-            BuildableName = "SwiftyJSON.framework"
-            BlueprintName = "SwiftyJSON"
+            BlueprintIdentifier = "63141E761EE1F27200D8587A"
+            BuildableName = "ConvenientRestKit.framework"
+            BlueprintName = "ConvenientRestKit OSX"
             ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "63141E761EE1F27200D8587A"
+            BuildableName = "ConvenientRestKit.framework"
+            BlueprintName = "ConvenientRestKit OSX"
+            ReferencedContainer = "container:ConvenientRestKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
