@@ -16,10 +16,11 @@ enum ConvenientRestKitError: Error {
     
     case wrongDateFormat
     case noDataInResponse
+    case unexpectedCode(code: Int, message: Data?)
     case wrongJSONFormat
     
     case failedToInitializeRawRepresentable
-    
+    case awkwardURL(String)
 }
 
 /// Elvis is now helps to throw
@@ -141,6 +142,21 @@ public extension JSON {
     
     func double(forKey key: KeyCodable) -> Double? {
         return self[key].double
+    }
+    
+    func urlValue(forKey key: KeyCodable) throws -> URL {
+        let string = try stringValue(forKey: key)
+        guard let url = URL(string: string) else {
+            throw ConvenientRestKitError.awkwardURL(string)
+        }
+        return url
+    }
+    
+    func url(forKey key: KeyCodable) -> URL? {
+        guard let string = string(forKey: key) else {
+            return nil
+        }
+        return URL(string: string)
     }
     
     func dateValue(forKey key: KeyCodable, dateFormatter: DateFormatter) throws -> Date {
