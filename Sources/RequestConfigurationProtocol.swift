@@ -17,7 +17,7 @@ public protocol RequestConfigurationProtocol {
 
 public protocol GetRequestConfigurationProtocol: RequestConfigurationProtocol {
     
-    static func parseResult(from data: Data) throws -> ResultType
+	static func parseResult(from data: Data) throws -> ResultType
     
 }
 
@@ -32,9 +32,9 @@ public extension GetRequestConfigurationProtocol {
     }
     
     static func processResponse(response: HTTPURLResponse, data: Data?) throws -> ResultType {
-        guard response.statusCode == 201 || response.statusCode == 200 else {
-            fatalError()
-        }
+		guard response.statusCode == 200 else {
+			throw ConvenientRestKitError.unexpectedCode(code: response.statusCode, message: data)
+		}
         
         guard let data = data else {
             throw ConvenientRestKitError.noDataInResponse
@@ -42,5 +42,4 @@ public extension GetRequestConfigurationProtocol {
         
         return try parseResult(from: data)
     }
-    
 }
