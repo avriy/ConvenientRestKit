@@ -23,6 +23,31 @@ enum ConvenientRestKitError: Error {
     case awkwardURL(String)
 }
 
+extension ConvenientRestKitError: LocalizedError {
+	var localizedDescription: String {
+		switch self {
+		case .noValueForKey(let key):
+			return "No value for key " + key
+		case .wrongDateFormat:
+			return "Wrong date format"
+		case .noDataInResponse:
+			return "No data"
+		case .unexpectedCode(code: let code, message: let data):
+			if let data = data, let string = String(data: data, encoding: .utf8) {
+				return "Unexpected code \(code) with message \(string)"
+			} else {
+				return "Unexpected code \(code)"
+			}
+		case .wrongJSONFormat:
+			return "Wrong json format"
+		case .failedToInitializeRawRepresentable:
+			return "Failed to create from raw representable"
+		case .awkwardURL(let urlValue):
+			return "Awkward url " + urlValue
+		}
+	}
+}
+
 /// Elvis is now helps to throw
 func ??<T>(lhs: T?, errorType: Error) throws -> T {
     if let value = lhs {
